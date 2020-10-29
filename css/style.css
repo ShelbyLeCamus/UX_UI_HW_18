@@ -75,12 +75,14 @@ button {
 
 .flexContainer {
  display: flex;
+ flex-direction: row;
 }
 
 .skillsBox {
   width: 30%;
   padding: 1%;
   text-align: center;
+  grid-template-rows: 1fr;
 }
 
 
@@ -118,15 +120,48 @@ button {
   text-align: center;
 }
 
+
+
+@media screen and (max-width: 600px) {
+  .flexContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .skillsBox {
+    width: 100%;
+    /*grid-template-rows: 1fr 1fr 1fr;*/
+  }
+  .workGrid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "projectImageOne" 
+    "projectDetailsOne" 
+    "projectImageTwo" 
+    "projectDetailsTwo" 
+    "projectImageThree" 
+    "projectDetailsThree";
+  }
+  .projectImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+  }
+}
+
+
+
 .projectImage {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin: 0 20px;
+  margin: 20px 20px;
 }
 
 .projectDetails {
-  margin: 0 20px;
+  margin: 20px 20px;
 }
 
 
@@ -143,26 +178,4 @@ footer ul {
 footer li {
   display: inline-block;
   padding: 0px 7px;
-}
-
-@media screen and (max-width: 600px) {
-  .flexContainer {
-    display: flex;
-    flex-direction: row;
-  }
-  .skillsBox {
-    width: 100%;
-  }
-  .workGrid {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: "projectImageOne projectDetailsOne projectImageTwo projectDetailsTwo projectImageThree projectDetailsThree";
-  }
-  .projectImage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 5px;
-  }
 }
