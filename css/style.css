@@ -76,15 +76,21 @@ button {
 .flexContainer {
  display: flex;
  flex-direction: row;
+ margin: 0 5px;
 }
 
 .skillsBox {
-  width: 30%;
-  padding: 1%;
+  padding: 2%;
+  margin: 0 20px;
   text-align: center;
   grid-template-rows: 1fr;
+  background-color: #8c483A;
+  color: #f2E8D5;
 }
 
+.skillsBox img {
+  width: 30%;
+}
 
 /*<!--  My UX Skills section coded using CSS Grid -->}*/
 .workGrid {
@@ -143,12 +149,8 @@ button {
     "projectImageThree" 
     "projectDetailsThree";
   }
-  .projectImage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 5px;
-  }
+  
+  
 }
 
 
@@ -156,8 +158,9 @@ button {
 .projectImage {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   margin: 20px 20px;
+  background-color:  #8c483A;
 }
 
 .projectDetails {
@@ -167,7 +170,7 @@ button {
 
 
 footer {
-  background-color: #8c483A;;
+  background-color: #8c483A;
   padding: 5px;
   color: #f2E8D5;
 }
